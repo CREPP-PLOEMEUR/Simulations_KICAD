@@ -30,7 +30,7 @@ do
     # Vérifier si le fichier README.md existe
     if [ -f "$readme_file" ]; then
         # Lire le contenu du fichier README.md
-        readme_text=$(cat "$readme_file")
+        readme_text=$(grep -v "^<!--" "$readme_file")
         
         echo "<div class='card mb-4'>
             <div class='card-header water'>
